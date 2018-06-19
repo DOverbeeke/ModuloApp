@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ModuloReloaded6.SchedulePage">
+  <ContentPage.Content>
+    <StackLayout>
+      <!--buttons-->
+      <Grid>
+        <Grid.RowDefinitions>
+          <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+          <!--<ColumnDefinition Width="*"/>-->
+          <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <!--<Button x:Name="DayButton" Grid.Column="0" Text="Day" TextColor="GhostWhite" Clicked="DayButtonClicked"/>-->
+        <Button x:Name="DayWeekSwitchButton" Grid.Column="0" Grid.Row="0" Text="Show Day" TextColor="GhostWhite" Clicked="DayWeekSwitchClicked"/>
+      </Grid>
+
+      <!--empty space--><!--
+      <Label x:Name="DateLabel" HorizontalOptions="Center" />-->
+
+      <!--calendar-->
+      <Grid x:Name="WholeCalendarGrid" ColumnSpacing="0" Margin="5,0,5,0">
+        <Grid.RowDefinitions>
+          <RowDefinition Height="Auto"/>
+          <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <!--<Grid.ColumnDefinitions>
+          <ColumnDefinition Width="Auto"/>
+          <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>-->
+        
+        <!--calendar_header-->
+        <Grid x:Name="HeaderGrid" Grid.ColumnSpan="2" RowSpacing="0" ColumnSpacing="0">
+          <!--filled in in .cs file-->
+        </Grid>
+
+        <!--calendar_raster-->
+        <ScrollView Grid.Row="1" VerticalOptions="Fill">
+          <Grid x:Name="CalendarGrid" RowSpacing="0" ColumnSpacing="0">
+            <!--filled in in .cs file-->
+          </Grid>
+        </ScrollView>
+        
+      </Grid>
+    </StackLayout>
+  </ContentPage.Content>
+</ContentPage>

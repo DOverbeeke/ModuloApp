@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ModuloReloaded6.RecommendationsReservationPage">
+  <ContentPage.Content>
+    <StackLayout Margin="5">
+      <Grid HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+        <ListView x:Name="LView" HasUnevenRows="True">
+          <ListView.ItemTemplate>
+            <DataTemplate>
+              <ViewCell>
+                <Grid Margin="0,12,0,12" ColumnSpacing="5">
+                  <Grid.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="ItemGridTapped"/>
+                  </Grid.GestureRecognizers>
+                  <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                  </Grid.RowDefinitions>
+                  <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+                  </Grid.ColumnDefinitions>
+                  <Label Grid.Column="0" Grid.Row="0" Grid.RowSpan="2" Text="{Binding RoomName}" FontAttributes="Bold" FontSize="Medium" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+                  <!--<Label Grid.Column="1" Grid.Row="0" Text="{Binding BeginDate}" FontSize="Medium"/>
+                  <Label Grid.Column="1" Grid.Row="1" Text="{Binding EndDate}" FontSize="Medium"/>-->
+                  <Label Grid.Column="1" Grid.Row="0" Grid.RowSpan="2" Text="{Binding Date}" FontSize="Medium" VerticalTextAlignment="Center" HorizontalTextAlignment="Center"/>
+                  <Label Grid.Column="2" Grid.Row="0" Text="{Binding BeginTime}" FontSize="Medium" HorizontalTextAlignment="Center"/>
+                  <Label Grid.Column="2" Grid.Row="1" Text="{Binding EndTime}" FontSize="Medium" HorizontalTextAlignment="Center"/>
+                  <Label Grid.Column="3" Grid.Row="0" Grid.RowSpan="2" Text="{Binding Size}" FontSize="Medium" VerticalTextAlignment="Center" HorizontalTextAlignment="Center"/>
+                </Grid>
+              </ViewCell>
+            </DataTemplate>
+          </ListView.ItemTemplate>
+        </ListView>
+        <Grid x:Name="TabGrid" IsVisible="False" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+          <Grid.GestureRecognizers>
+            <TapGestureRecognizer Tapped="TapGridTapped"/>
+          </Grid.GestureRecognizers>
+        </Grid>
+        <Frame x:Name="AlertFrame" IsVisible="False" OutlineColor="Red" CornerRadius="8" Padding="20,22,20,16" VerticalOptions="Center" HorizontalOptions="Center">
+          <!--for rounded edges (boxview can't do that)-->
+          <StackLayout HorizontalOptions="Center" VerticalOptions="Center">
+            <Grid ColumnSpacing="12" HorizontalOptions="Center" VerticalOptions="Center">
+              <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+              </Grid.RowDefinitions>
+              <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+              </Grid.ColumnDefinitions>
+              <Label x:Name="RoomAlertLabel" Grid.Row="0" Grid.ColumnSpan="2"
+                   Text="halloh!" FontAttributes="Bold" FontSize="Large" HorizontalTextAlignment="Center"/>
+              <Label x:Name="DateAlertLabel" Grid.Row="1" Grid.ColumnSpan="2"
+                   Text="datum1 hoor!" FontSize="Large" HorizontalTextAlignment="Center"/>
+              <Label x:Name="TimeAlertLabel" Grid.Row="2" Grid.ColumnSpan="2"
+                  Text="datum2, jawel!" FontSize="Large" HorizontalTextAlignment="Center"/>
+              <Label x:Name="PeopleAlertLabel" Grid.Row="3" Grid.ColumnSpan="2"
+                  Text="Group of " FontSize="Large" HorizontalTextAlignment="Center"/>
+              <Label Grid.Row="4" Grid.ColumnSpan="2"
+                  Text="" FontSize="Large" HorizontalTextAlignment="Center"/>
+              <Button x:Name="ConfirmButtonAlert" Grid.Row="5" Grid.Column="1" Text="Confirm" TextColor="GhostWhite" BackgroundColor="Red" Clicked="ConfirmClicked"/>
+              <Button Grid.Row="5" Text="Cancel" TextColor="Red" BorderColor="Red" BorderWidth="1" BackgroundColor="Transparent" Clicked="CancelClicked"/>
+            </Grid>
+          </StackLayout>
+        </Frame>
+      </Grid>
+    </StackLayout>
+  </ContentPage.Content>
+</ContentPage>

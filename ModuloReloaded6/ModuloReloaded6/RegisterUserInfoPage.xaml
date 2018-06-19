@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ModuloReloaded6.RegisterUserInfoPage">
+  <ContentPage.Content>
+    <StackLayout HorizontalOptions="Center" VerticalOptions="Center" Margin="30">
+      <Label Text="Unfortunately, we can't see what class you're in! Can you please tell us?"/>
+      <Picker x:Name="ClassPicker"
+              SelectedIndexChanged="ClassPicker_SelectedIndexChanged"/>
+      <Button x:Name="ClassButton" Text="Here you go!" TextColor="White" BackgroundColor="White" BorderColor="Red" BorderWidth="1" IsEnabled="False"
+              Clicked="Button_Clicked"/>
+    </StackLayout>
+  </ContentPage.Content>
+</ContentPage>

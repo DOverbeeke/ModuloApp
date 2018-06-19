@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ModuloReloaded6.SignInPage"
+             NavigationPage.HasNavigationBar="False"
+             BackgroundColor="Red">
+  <ContentPage.Content>
+    <StackLayout>
+      <Grid VerticalOptions="FillAndExpand">
+        <Grid.RowDefinitions>
+          <RowDefinition Height="*"/>
+          <RowDefinition Height="*"/>
+          <RowDefinition Height="*"/>
+          <RowDefinition Height="*"/>
+          <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <!--<Label  Grid.Row="1"
+                Text="HRO"
+                TextColor="GhostWhite"
+                FontAttributes="Bold"
+                VerticalOptions="Center"
+                HorizontalOptions="Center" />-->
+        <Image Source="HRlogo.png"
+               Grid.Row="1"
+               VerticalOptions="Center"
+               HorizontalOptions="Center"
+               Aspect="AspectFit"/>
+        <Button Grid.Row="2"
+                Text="Sign In"
+                TextColor="Red"
+                BackgroundColor="GhostWhite"
+                VerticalOptions="Center"
+                HorizontalOptions="Center"
+                Clicked="SignInClicked"/>
+        <ScrollView>
+          <Label x:Name="DebugLabel" TextColor="GhostWhite" />
+        </ScrollView>
+        <Button Grid.Row="3"
+                Text="Fake"
+                TextColor="Red"
+                BackgroundColor="GhostWhite"
+                VerticalOptions="Center"
+                HorizontalOptions="Center"
+                Clicked="FakeSignInClicked"/>
+        <Button Grid.Row="4"
+                Text="Teacher"
+                TextColor="Red"
+                BackgroundColor="GhostWhite"
+                VerticalOptions="Center"
+                HorizontalOptions="Center"
+                Clicked="TeacherButtonClicked"/>
+      </Grid>
+    </StackLayout>
+  </ContentPage.Content>
+</ContentPage>

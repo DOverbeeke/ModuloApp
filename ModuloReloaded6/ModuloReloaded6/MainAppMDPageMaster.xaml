@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ModuloReloaded6.MainAppMDPageMaster"
+             Title="Master"
+             HeightRequest="100">
+  <StackLayout>
+    <ListView x:Name="MenuItemsListView"
+              SeparatorVisibility="None"
+              HasUnevenRows="true"
+              ItemsSource="{Binding MenuItems}">
+      <ListView.Header>
+        <Grid x:Name="studentGrid" BackgroundColor="Red">
+          <!--BackgroundColor="#03A9F4">-->
+          
+          <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="10"/>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="*"/>
+            <!--<ColumnDefinition Width="10"/>-->
+          </Grid.ColumnDefinitions>
+          <Grid.RowDefinitions>
+            <RowDefinition Height="5"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="5"/>
+          </Grid.RowDefinitions>
+          <Grid.GestureRecognizers>
+            <TapGestureRecognizer Tapped="UserInfoTapped"/>
+          </Grid.GestureRecognizers>
+          <Label x:Name="UserNameLabel"
+            Grid.Column="1"
+            Grid.Row="1"
+            Grid.ColumnSpan="2"
+            Text="[username]"
+            FontAttributes="Bold"
+            TextColor="WhiteSmoke"
+            Style="{DynamicResource SubtitleStyle}"/>
+          <Label x:Name="UserIdLabel"
+            Grid.Column="1"
+            Grid.Row="2"
+            Grid.ColumnSpan="2"
+            Text="[user_id]"
+            TextColor="WhiteSmoke"
+            Style="{DynamicResource SubtitleStyle}"/>
+          <Label x:Name="ClassLabel"
+            Grid.Column="1"
+            Grid.Row="3"
+            Grid.ColumnSpan="2"
+            Text="[class]"
+            TextColor="WhiteSmoke"
+            Style="{DynamicResource SubtitleStyle}"/>
+          <Grid Grid.Column="2" Grid.Row="2" Grid.RowSpan="2" HorizontalOptions="End" VerticalOptions="Start">
+            <Image
+              Source="EditPencilIcon1.png"
+              Aspect="AspectFit"/>
+          </Grid>
+          <!--<Label Grid.Column="0" Grid.Row="2" Text="" BackgroundColor="Blue"/>-->
+        </Grid>
+      </ListView.Header>
+      <ListView.ItemTemplate>
+        <DataTemplate>
+          <ViewCell>
+            <StackLayout Padding="15,10" HorizontalOptions="FillAndExpand">
+              <Label VerticalOptions="FillAndExpand" 
+                    VerticalTextAlignment="Center" 
+                    Text="{Binding Title}" 
+                    FontSize="24"/>
+            </StackLayout>
+          </ViewCell>
+        </DataTemplate>
+      </ListView.ItemTemplate>
+    </ListView>
+  </StackLayout>
+</ContentPage>

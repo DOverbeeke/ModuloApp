@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ModuloReloaded6.ScheduleTestPage1">
+  <ContentPage.Content>
+    <StackLayout>
+      <!--buttons-->
+      <Grid>
+        <Grid.RowDefinitions>
+          <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+          <!--<ColumnDefinition Width="*"/>-->
+          <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <!--<Button x:Name="DayButton" Grid.Column="0" Text="Day" TextColor="GhostWhite" Clicked="DayButtonClicked"/>-->
+        <Button x:Name="DayWeekSwitchButton" Grid.Column="0" Grid.Row="0" Text="Show Day" TextColor="GhostWhite" Clicked="DayWeekSwitchClicked"/>
+      </Grid>
+
+      <ScrollView Margin="0" VerticalOptions="Fill" HorizontalOptions="Fill">
+        <Grid x:Name="CalendarGrid" HorizontalOptions="Fill" VerticalOptions="Fill" Margin="5,0,5,5">
+          <!--<Grid.RowDefinitions>
+          <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+          <ColumnDefinition Width="Auto"/>
+        </Grid.ColumnDefinitions>-->
+
+          <!--<Label Grid.Column="0" Grid.Row="0" Text="Apr"/>
+        <Label Grid.Column="0" Grid.Row="1" Text="c0r1"/>
+        <Label Grid.Column="1" Grid.Row="0" Text="c1r0"/>
+        <Label Grid.Column="1" Grid.Row="1" Text="c1r1"/>
+        <Label Grid.Column="1" Grid.Row="2" Text="c1r1"/>
+        <Label Grid.Column="1" Grid.Row="3" Text="c1r1"/>
+        <Label Grid.Column="1" Grid.Row="4" Text="c1r1"/>-->
+        </Grid>
+      </ScrollView>
+
+    </StackLayout>
+  </ContentPage.Content>
+</ContentPage>

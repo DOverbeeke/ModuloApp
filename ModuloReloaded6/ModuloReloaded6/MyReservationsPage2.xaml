@@ -1,0 +1,95 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ModuloReloaded6.MyReservationsPage2">
+  <ContentPage.Content>
+    <StackLayout Margin="5">
+      <Grid HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+        <ListView x:Name="LView" HasUnevenRows="True">
+          <ListView.ItemTemplate>
+            <DataTemplate>
+              <ViewCell>
+                <Grid Margin="0,12,0,12" ColumnSpacing="5">
+                  <Grid.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="ItemTapped"/>
+                  </Grid.GestureRecognizers>
+                  <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                  </Grid.RowDefinitions>
+                  <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                  </Grid.ColumnDefinitions>
+                  <Label Grid.Column="0" Grid.Row="1" Grid.RowSpan="3" FontSize="Medium" Text="{Binding Room.Name}" FontAttributes="Bold" VerticalTextAlignment="Center" HorizontalTextAlignment="Center"/>
+                  <!--startdate-->
+                  <Label Grid.Column="1" Grid.Row="1" FontSize="Medium" Text="{Binding StartDateTime, StringFormat='{0:yyyy}'}" VerticalTextAlignment="Center" HorizontalTextAlignment="Center"/>
+                  <Label Grid.Column="1" Grid.Row="2" FontSize="Medium" Text="{Binding StartDateTime, StringFormat='{0:dd MMM}'}" VerticalTextAlignment="Center" HorizontalTextAlignment="Center"/>
+                  <Label Grid.Column="1" Grid.Row="3" FontSize="Medium" Text="{Binding StartDateTime, StringFormat='{0:HH:mm}'}" VerticalTextAlignment="Center" HorizontalTextAlignment="Center"/>
+                  <!--enddate-->
+                  <Label Grid.Column="2" Grid.Row="1" FontSize="Medium" Text="{Binding EndDateTime, StringFormat='{0:yyyy}'}" VerticalTextAlignment="Center" HorizontalTextAlignment="Center"/>
+                  <Label Grid.Column="2" Grid.Row="2" FontSize="Medium" Text="{Binding EndDateTime, StringFormat='{0:dd MMM}'}" VerticalTextAlignment="Center" HorizontalTextAlignment="Center"/>
+                  <Label Grid.Column="2" Grid.Row="3" FontSize="Medium" Text="{Binding EndDateTime, StringFormat='{0:HH:mm}'}" VerticalTextAlignment="Center" HorizontalTextAlignment="Center"/>
+                  <Button Grid.Column="3" Grid.Row="1" Grid.RowSpan="3" BindingContext="{Binding}" Text="Cancel" BackgroundColor="Red" TextColor="GhostWhite" Clicked="CancelResClicked"/>
+                </Grid>
+              </ViewCell>
+            </DataTemplate>
+          </ListView.ItemTemplate>
+        </ListView>
+        <Grid x:Name="TabGrid" IsVisible="False" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+          <Grid.GestureRecognizers>
+            <TapGestureRecognizer Tapped="TapGridTapped"/>
+          </Grid.GestureRecognizers>
+        </Grid>
+        <Frame x:Name="AlertFrame" IsVisible="False" OutlineColor="Red" CornerRadius="8" Padding="20,22,20,16" VerticalOptions="Center" HorizontalOptions="Center">
+          <!--for rounded edges (boxview can't do that)-->
+          <StackLayout HorizontalOptions="Center" VerticalOptions="Center">
+            <Grid ColumnSpacing="12" HorizontalOptions="Center" VerticalOptions="Center">
+              <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+
+                <!--ruimte onder buttons-->
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+              </Grid.RowDefinitions>
+              <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+              </Grid.ColumnDefinitions>
+              <Label x:Name="RoomAlertLabel" Grid.Row="0" Grid.ColumnSpan="2"
+                   Text="halloh!" FontAttributes="Bold" FontSize="Large" HorizontalTextAlignment="Center"/>
+              <Label Grid.Row="1" Grid.ColumnSpan="2"
+                  Text="" FontSize="Small" HorizontalTextAlignment="Center"/>
+              <Label Grid.Row="2" Grid.ColumnSpan="2"
+                     Text="FROM" FontAttributes="Bold" FontSize="Small" HorizontalTextAlignment="Center"/>
+              <Label x:Name="BeginDateTimeAlertLabel" Grid.Row="3" Grid.ColumnSpan="2"
+                   Text="datum1 hoor!" FontSize="Large" HorizontalTextAlignment="Center"/>
+              <Label Grid.Row="4" Grid.ColumnSpan="2"
+                     Text="TILL" FontAttributes="Bold" FontSize="Small" HorizontalTextAlignment="Center"/>
+              <Label x:Name="EndDateTimeAlertLabel" Grid.Row="5" Grid.ColumnSpan="2"
+                  Text="datum2, jawel!" FontSize="Large" HorizontalTextAlignment="Center"/>
+
+              <Label Grid.Row="6" Grid.ColumnSpan="2"
+                  Text="" FontSize="Large" HorizontalTextAlignment="Center"/>
+              <Button x:Name="ConfirmButton" Grid.Row="7" Grid.Column="1" Text="Confirm" TextColor="GhostWhite" BackgroundColor="Red" Clicked="ConfirmClicked"/>
+              <Button Grid.Row="7" Text="Back" TextColor="Red" BorderColor="Red" BorderWidth="1" BackgroundColor="Transparent" Clicked="CancelClicked"/>
+
+            </Grid>
+          </StackLayout>
+        </Frame>
+      </Grid>
+    </StackLayout>
+  </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ModuloReloaded6.AddingReservationDonePage">
+  <ContentPage.Content>
+    <StackLayout>
+      <Label Text="Reservation added! :D" FontSize="Medium"/>
+      <Button Text="Back! :D" Clicked="BackClicked"/>
+      <Button Text="Show me! :D" Clicked="ShowClicked"/>
+    </StackLayout>
+  </ContentPage.Content>
+</ContentPage>

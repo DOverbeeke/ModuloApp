@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ModuloReloaded6.MyInfoPageStudent">
+  <ContentPage.Content>
+    <StackLayout HorizontalOptions="Center" VerticalOptions="Center">
+      <Grid x:Name="grid">
+        <Grid.ColumnDefinitions>
+          <ColumnDefinition Width="*"/>
+          <ColumnDefinition Width="Auto"/>
+          <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+          <RowDefinition Height="*"/>
+          <RowDefinition Height="Auto"/>
+          <RowDefinition Height="Auto"/>
+          <RowDefinition Height="Auto"/>
+          <RowDefinition Height="Auto"/>
+          <RowDefinition Height="Auto"/>
+          <RowDefinition Height="Auto"/>
+          <RowDefinition Height="Auto"/>
+          <RowDefinition Height="Auto"/>
+          <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Label Grid.Column="1" Grid.Row="1" Text="Name" HorizontalTextAlignment="Center" FontSize="Large" FontAttributes="Bold"/>
+        <Label x:Name="NameLabel" Grid.Column="1" Grid.Row="2" Text="name" HorizontalTextAlignment="Center" FontSize="Large" FontAttributes="None"/>
+        <Label Grid.Column="1" Grid.Row="3" Text=""/>
+        <Label Grid.Column="1" Grid.Row="4" Text="StudentNumber" HorizontalTextAlignment="Center" FontSize="Large" FontAttributes="Bold"/>
+        <Label x:Name="StudNoLabel" Grid.Column="1" Grid.Row="5" Text="studentnumber" HorizontalTextAlignment="Center" FontSize="Large" FontAttributes="None"/>
+        <Label Grid.Column="1" Grid.Row="6" Text=""/>
+        <Label Grid.Column="1" Grid.Row="7" Text="Class" HorizontalTextAlignment="Center" FontSize="Large" FontAttributes="Bold"/>
+        <Label x:Name="ClassLabel" Grid.Column="1" Grid.Row="8" Text="class" HorizontalTextAlignment="Center" FontSize="Large" FontAttributes="None"/>
+
+        <Image x:Name="image" Source="EditPencilIcon1.png" Aspect="AspectFit" BackgroundColor="Red" Grid.Column="2" Grid.Row="7" Grid.RowSpan="2" HorizontalOptions="Start">
+          <Image.GestureRecognizers>
+            <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
+          </Image.GestureRecognizers>
+        </Image>
+
+        <!--<Button x:Name="button" Grid.Column="3" Grid.Row="4" Grid.RowSpan="2" 
+                BackgroundColor="Red" HorizontalOptions="Center" VerticalOptions="Center" Clicked="Button_Clicked"/>-->
+      </Grid>
+
+    </StackLayout>
+  </ContentPage.Content>
+</ContentPage>

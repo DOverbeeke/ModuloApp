@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ModuloReloaded6.MyReservationsPage">
+    <ContentPage.Content>
+    <ScrollView Margin="5">
+      <StackLayout HorizontalOptions="CenterAndExpand">
+        <Grid x:Name="g"
+            Margin="20"
+            HorizontalOptions="Center"
+            VerticalOptions="Center"
+            ColumnSpacing="0"
+            RowSpacing="0">
+        </Grid>
+      </StackLayout>
+    </ScrollView>
+  </ContentPage.Content>
+</ContentPage>

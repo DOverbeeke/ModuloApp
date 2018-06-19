@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ModuloReloaded6.ScheduleDayTestPage1">
+  <ContentPage.Content>
+    <StackLayout>
+      <!--buttons-->
+      <Grid RowSpacing ="0" ColumnSpacing="0">
+        <Grid.RowDefinitions>
+          <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+          <ColumnDefinition Width="25*"/>
+          <ColumnDefinition Width="50*"/>
+          <ColumnDefinition Width="25*"/>
+        </Grid.ColumnDefinitions>
+        <Button x:Name="DayWeekSwitchButton" Margin="5" Grid.Column="1" Grid.Row="0" Text="Show Week" BackgroundColor="Red" TextColor="GhostWhite" Clicked="DayWeekSwitchClicked"/>
+        <Button x:Name="PrevDayButton" Margin="5" Grid.Column="0" Text="&lt;&lt;" TextColor="Red" BackgroundColor="GhostWhite" BorderColor="Red" BorderWidth="1" Clicked="PrevDayButton_Clicked"/>
+        <Button x:Name="NextDayButton" Margin="5" Grid.Column="2" Text="&gt;&gt;" TextColor="Red" BackgroundColor="GhostWhite" BorderColor="Red" BorderWidth="1" Clicked="NextDayButton_Clicked"/>
+      </Grid>
+
+      <!--calendar-->
+      <Grid Grid.Row="1" Margin="5,0,5,0" RowSpacing="0" ColumnSpacing="0">
+        <Grid.RowDefinitions>
+          <RowDefinition Height="Auto"/>
+          <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+          <ColumnDefinition Width="Auto"/>
+          <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <!--calendar_header-->
+        <Label x:Name="MonthLabel" FontSize="Large" Grid.Column="0" Grid.Row="0" VerticalTextAlignment="Center"/>
+        <Grid x:Name="DaysGrid" Grid.Column="1" Grid.Row="0" Margin="0" RowSpacing="0" ColumnSpacing="0">
+          <!--filled in in .cs file-->
+        </Grid>
+
+        <ScrollView x:Name="ScrollView" Margin="0" Padding="0" Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="2">
+          <Grid x:Name="ScrollGrid" Margin="0" Padding="0" Grid.ColumnSpan="6" RowSpacing="0">
+            <Grid.ColumnDefinitions>
+              <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+
+            <!--filled in in .cs file-->
+          
+          </Grid>
+        </ScrollView>
+
+      </Grid>
+
+
+    </StackLayout>
+  </ContentPage.Content>
+</ContentPage>

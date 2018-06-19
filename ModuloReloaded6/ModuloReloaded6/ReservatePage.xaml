@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ModuloReloaded6.ReservatePage">
+  <ContentPage.Content>
+    <ScrollView HorizontalOptions="Center" VerticalOptions="Center" Margin="40,0,40,10">
+      <StackLayout>
+        <!--<Label Text="Type of user" FontSize="Medium"/>
+        <Picker x:Name="UserTypePicker">
+          <Picker.Items>
+            <x:String>Student</x:String>
+            <x:String>Teacher</x:String>
+          </Picker.Items>
+          <Picker.SelectedIndex>1</Picker.SelectedIndex>
+        </Picker>-->
+
+        <Label x:Name="DayLabel" Text="Day" FontSize="Medium"/>
+        <DatePicker x:Name="DatePicker1"
+                  DateSelected="DatePicker1_DateSelected"/>
+
+        <Label Text="From" FontSize="Medium"/>
+        <TimePicker x:Name="FromPicker" PropertyChanged="timepicker2_PropertyChanged"/>
+        <Label Text="Till" FontSize="Medium"/>
+        <TimePicker x:Name="TillPicker" PropertyChanged="timepicker2_PropertyChanged"/>
+
+        <Label Text="Group of" FontSize="Medium"/>
+        <Entry x:Name="PeopleAmountEntry" Keyboard="Numeric" Text="5"/>
+
+        <!--<Label Text="Room" FontSize="Medium"/>
+        <Picker x:Name="RoomPicker" TextColor="LightGray" Title="Room" SelectedIndexChanged="RoomPicker_SelectedIndexChanged">
+          <Picker.Items>
+            <x:String>None Preferred</x:String>
+          </Picker.Items>
+          <Picker.SelectedIndex>0</Picker.SelectedIndex>
+        </Picker>-->
+
+        <!--<Label Text="User" FontSize="Medium"/>
+        <Entry x:Name="UserEntry" Placeholder="e.g. 0927429" Text="0976482"/>-->
+
+        <Button Text="Best Options" TextColor="White" BackgroundColor="Red"
+                Clicked="BestOptions_Clicked"/>
+      </StackLayout>
+    </ScrollView>
+  </ContentPage.Content>
+</ContentPage>

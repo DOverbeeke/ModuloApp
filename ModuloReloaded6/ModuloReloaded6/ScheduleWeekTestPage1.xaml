@@ -1,0 +1,144 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ModuloReloaded6.ScheduleWeekTestPage1">
+  <ContentPage.Content>
+    <Grid Margin="0" Padding="0" RowSpacing="0" ColumnSpacing="0" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+      <!--calendar-->
+      <StackLayout>
+        <!--<Label Text="Showing Week Schedule!"
+             HorizontalOptions="CenterAndExpand" />-->
+
+        <!--buttons-->
+        <Grid RowSpacing="0" ColumnSpacing="0">
+          <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+          </Grid.RowDefinitions>
+          <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="25*"/>
+            <ColumnDefinition Width="50*"/>
+            <ColumnDefinition Width="25*"/>
+          </Grid.ColumnDefinitions>
+          <Button x:Name="DayWeekSwitchButton" Margin="5" Grid.Column="1" Text="Show Day" BackgroundColor="Red" TextColor="GhostWhite" Clicked="DayWeekSwitchClicked"/>
+          <Button x:Name="PrevWeekButton" Margin="5" Grid.Column="0" Text="&lt;&lt;" TextColor="Red" BackgroundColor="GhostWhite" BorderColor="Red" BorderWidth="1" Clicked="PrevWeekButton_Clicked"/>
+          <Button x:Name="NextWeekButton" Margin="5" Grid.Column="2" Text="&gt;&gt;" TextColor="Red" BackgroundColor="GhostWhite" BorderColor="Red" BorderWidth="1" Clicked="NextWeekButton_Clicked"/>
+        </Grid>
+
+        <!--calendar-->
+        <Grid Grid.Row="1" Margin="5,0,5,0" RowSpacing="0" ColumnSpacing="0">
+          <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+          </Grid.RowDefinitions>
+          <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="*"/>
+          </Grid.ColumnDefinitions>
+
+          <!--calendar_header-->
+          <Label x:Name="MonthLabel" FontSize="Large" Grid.Column="0" Grid.Row="0" VerticalTextAlignment="Center"/>
+          <Grid x:Name="DaysGrid" Grid.Column="1" Grid.Row="0" Margin="0" RowSpacing="0" ColumnSpacing="0">
+            <!--filled in in .cs file-->
+          </Grid>
+
+          <ScrollView x:Name="ScrollView" Margin="0" Padding="0" Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="2">
+            <Grid x:Name="ScrollGrid" Margin="0" Padding="0" Grid.ColumnSpan="6" RowSpacing="0">
+              <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+              </Grid.ColumnDefinitions>
+
+              <!--filled in in .cs file-->
+
+            </Grid>
+          </ScrollView>
+
+        </Grid>
+
+      </StackLayout>
+
+      <!--popup-->
+      <Grid x:Name="TabGrid" Opacity="0.5" BackgroundColor="Black" IsVisible="False" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+        <Grid.GestureRecognizers>
+          <TapGestureRecognizer Tapped="TapGridTapped"/>
+        </Grid.GestureRecognizers>
+      </Grid>
+      <Frame x:Name="ReservationAlertFrame" IsVisible="False" OutlineColor="Red" CornerRadius="8" Padding="20,22,20,16" VerticalOptions="Center" HorizontalOptions="Center">
+        <!--for rounded edges (boxview can't do that)-->
+        <StackLayout HorizontalOptions="Center" VerticalOptions="Center">
+          <Grid ColumnSpacing="12" HorizontalOptions="Center" VerticalOptions="Center">
+            <Grid.RowDefinitions>
+              <RowDefinition Height="Auto"/>
+              <RowDefinition Height="Auto"/>
+              <RowDefinition Height="Auto"/>
+              <RowDefinition Height="Auto"/>
+              <RowDefinition Height="Auto"/>
+              <RowDefinition Height="Auto"/>
+              <!--empty space-->
+              <RowDefinition Height="Auto"/>
+              <!--buttons-->
+              <RowDefinition Height="Auto"/>
+              <!--empty space-->
+              <RowDefinition Height="Auto"/>
+              <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+              <ColumnDefinition Width="Auto"/>
+              <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+            <Label x:Name="DayReservationAlertLabel" Grid.Row="0" Grid.ColumnSpan="2"
+                     Text="halloh!" TextColor="Red" FontAttributes="None" FontSize="Large" HorizontalTextAlignment="Center"/>
+            <Label x:Name="RoomReservationAlertLabel" Grid.Row="1" Grid.ColumnSpan="2"
+                     Text="halloh!" FontAttributes="Bold" FontSize="Large" HorizontalTextAlignment="Center"/>
+            <Label x:Name="TimeStartTitleReservationAlertLabel" Grid.Row="2" Grid.ColumnSpan="2"
+                     Text="halloh!" FontAttributes="Bold" FontSize="Small" HorizontalTextAlignment="Center"/>
+            <Label x:Name="TimeStartReservationAlertLabel" Grid.Row="3" Grid.ColumnSpan="2"
+                     Text="halloh!" FontAttributes="None" FontSize="Large" HorizontalTextAlignment="Center"/>
+            <Label x:Name="TimeEndTitleReservationAlertLabel" Grid.Row="4" Grid.ColumnSpan="2"
+                     Text="halloh!" FontAttributes="Bold" FontSize="Small" HorizontalTextAlignment="Center"/>
+            <Label x:Name="TimeEndReservationAlertLabel" Grid.Row="5" Grid.ColumnSpan="2"
+                     Text="halloh!" FontAttributes="None" FontSize="Large" HorizontalTextAlignment="Center"/>
+
+
+            <!--<Label x:Name="DateReservationAlertLabel" Grid.Row="1" Grid.ColumnSpan="2"
+                     Text="datum1 hoor!" FontSize="Large" HorizontalTextAlignment="Center"/>
+            <Label x:Name="DayReservationAlertLabel" Grid.Row="2" Grid.ColumnSpan="2"
+                    Text="datum2, jawel!" FontSize="Large" HorizontalTextAlignment="Center"/>
+            <Label x:Name="PeopleReservationAlertLabel" Grid.Row="3" Grid.ColumnSpan="2"
+                    Text="Group of " FontSize="Large" HorizontalTextAlignment="Center"/>-->
+            <Label Grid.Row="6" Grid.ColumnSpan="2"
+                    Text="" FontSize="Large" HorizontalTextAlignment="Center"/>
+            <!--<Button x:Name="ConfirmButtonAlert" Grid.Row="7" Grid.Column="1" Text="Confirm" TextColor="GhostWhite" BackgroundColor="Red" Clicked="ReservationConfirmClicked"/>-->
+            <Button Grid.Row="7" Text="Cancel" TextColor="Red" BorderColor="Red" BorderWidth="1" BackgroundColor="Transparent" Clicked="ReservationCancelClicked"/>
+          </Grid>
+        </StackLayout>
+      </Frame>
+      <!--<Frame x:Name="LessonAlertFrame" IsVisible="False" OutlineColor="Red" CornerRadius="8" Padding="20,22,20,16" VerticalOptions="Center" HorizontalOptions="Center">
+        --><!--for rounded edges (boxview can't do that)--><!--
+        <StackLayout HorizontalOptions="Center" VerticalOptions="Center">
+          <Grid ColumnSpacing="12" HorizontalOptions="Center" VerticalOptions="Center">
+            <Grid.RowDefinitions>
+              <RowDefinition Height="Auto"/>
+              --><!--empty space--><!--
+              <RowDefinition Height="Auto"/>
+              --><!--buttons--><!--
+              <RowDefinition Height="Auto"/>
+              --><!--empty space--><!--
+              <RowDefinition Height="Auto"/>
+              <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+              <ColumnDefinition Width="Auto"/>
+              <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+            <Label x:Name="SubjectAlertLabel" Grid.Row="0" Grid.ColumnSpan="2" Text="[subject]" HorizontalOptions="Center" VerticalOptions="Center"/>
+
+            <Label Grid.Row="1" Grid.ColumnSpan="2"
+                    Text="" FontSize="Large" HorizontalTextAlignment="Center"/>
+            <Button x:Name="ConfirmButtonAlert" Grid.Row="2" Grid.Column="1" Text="Confirm" TextColor="GhostWhite" BackgroundColor="Red" Clicked="ReservationConfirmClicked"/>
+            <Button Grid.Row="2" Text="Cancel" TextColor="Red" BorderColor="Red" BorderWidth="1" BackgroundColor="Transparent" Clicked="ReservationCancelClicked"/>
+          </Grid>
+        </StackLayout>
+      </Frame>-->
+    </Grid>
+  </ContentPage.Content>
+</ContentPage>

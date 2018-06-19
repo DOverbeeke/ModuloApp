@@ -1,0 +1,102 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ModuloReloaded6.RoosterTestPage">
+  <ContentPage.Content>
+    <StackLayout>
+      <Label Text="Testrooster!"
+                HorizontalOptions="CenterAndExpand" />
+      <ScrollView Margin="4,0,4,0">
+        <StackLayout>
+          <Grid>
+            <Grid.RowDefinitions>
+              <RowDefinition Height="1"/>
+              <RowDefinition Height="50"/>
+              <RowDefinition Height="1"/>
+              <RowDefinition Height="50"/>
+              <RowDefinition Height="1"/>
+              <RowDefinition Height="50"/>
+              <RowDefinition Height="1"/>
+              <RowDefinition Height="50"/>
+              <RowDefinition Height="1"/>
+              <RowDefinition Height="50"/>
+
+              <!--5-->
+              <RowDefinition Height="1"/>
+              <RowDefinition Height="50"/>
+              <RowDefinition Height="1"/>
+              <RowDefinition Height="50"/>
+              <RowDefinition Height="1"/>
+              <RowDefinition Height="50"/>
+              <RowDefinition Height="1"/>
+              <RowDefinition Height="50"/>
+              <RowDefinition Height="1"/>
+              <RowDefinition Height="50"/>
+              <!--10-->
+              <RowDefinition Height="1"/>
+              <RowDefinition Height="50"/>
+              <RowDefinition Height="1"/>
+              <RowDefinition Height="50"/>
+              <RowDefinition Height="1"/>
+              <RowDefinition Height="50"/>
+              <RowDefinition Height="1"/>
+              <RowDefinition Height="50"/>
+              <RowDefinition Height="1"/>
+              <RowDefinition Height="50"/>
+              <!--15-->
+              <RowDefinition Height="1"/>
+              <RowDefinition Height="50"/>
+              <RowDefinition Height="1"/>
+              <RowDefinition Height="50"/>
+              <RowDefinition Height="1"/>
+              <RowDefinition Height="50"/>
+              <RowDefinition Height="1"/>
+              <RowDefinition Height="50"/>
+              <RowDefinition Height="1"/>
+              <RowDefinition Height="50"/>
+              <!--20-->
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+              <ColumnDefinition Width="Auto"/>
+              <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <!--drawing lines-->
+            <BoxView Grid.Column="0" Grid.Row="2" Grid.ColumnSpan="2" Color="LightGray" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"/>
+            <BoxView Grid.Column="0" Grid.Row="4" Grid.ColumnSpan="2" Color="LightGray" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"/>
+            <BoxView Grid.Column="0" Grid.Row="6" Grid.ColumnSpan="2" Color="LightGray" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"/>
+            <BoxView Grid.Column="0" Grid.Row="8" Grid.ColumnSpan="2" Color="LightGray" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"/>
+            <BoxView Grid.Column="0" Grid.Row="10" Grid.ColumnSpan="2" Color="LightGray" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"/>
+            <BoxView Grid.Column="0" Grid.Row="12" Grid.ColumnSpan="2" Color="LightGray" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"/>
+            <BoxView Grid.Column="0" Grid.Row="14" Grid.ColumnSpan="2" Color="LightGray" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"/>
+            <BoxView Grid.Column="0" Grid.Row="16" Grid.ColumnSpan="2" Color="LightGray" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"/>
+            <BoxView Grid.Column="0" Grid.Row="18" Grid.ColumnSpan="2" Color="LightGray" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"/>
+            <BoxView Grid.Column="0" Grid.Row="20" Grid.ColumnSpan="2" Color="LightGray" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"/>
+            <BoxView Grid.Column="0" Grid.Row="22" Grid.ColumnSpan="2" Color="LightGray" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"/>
+
+            <!--inserting timestamps like 6:00, 7:00, etc.-->
+            <Label Grid.Column="0" Grid.Row="1" Text="6:00" TextColor="Gray"/>
+            <Label Grid.Column="0" Grid.Row="3" Text="7:00" TextColor="Gray"/>
+            <Label Grid.Column="0" Grid.Row="5" Text="8:00" TextColor="Gray"/>
+            <Label Grid.Column="0" Grid.Row="7" Text="9:00" TextColor="Gray"/>
+            <Label Grid.Column="0" Grid.Row="9" Text="10:00" TextColor="Gray"/>
+            <Label Grid.Column="0" Grid.Row="11" Text="11:00" TextColor="Gray"/>
+            <Label Grid.Column="0" Grid.Row="13" Text="12:00" TextColor="Gray"/>
+            <Label Grid.Column="0" Grid.Row="15" Text="13:00" TextColor="Gray"/>
+            <Label Grid.Column="0" Grid.Row="17" Text="14:00" TextColor="Gray"/>
+            <Label Grid.Column="0" Grid.Row="19" Text="15:00" TextColor="Gray"/>
+            <Label Grid.Column="0" Grid.Row="21" Text="16:00" TextColor="Gray"/>
+            <Label Grid.Column="0" Grid.Row="23" Text="17:00" TextColor="Gray"/>
+            <Label Grid.Column="0" Grid.Row="25" Text="18:00" TextColor="Gray"/>
+
+            <!--<BoxView Grid.Column="1" Grid.Row=""-->
+            
+            <BoxView>
+            </BoxView>
+          </Grid>
+        </StackLayout>
+
+      </ScrollView>
+    </StackLayout>
+  </ContentPage.Content>
+</ContentPage>
